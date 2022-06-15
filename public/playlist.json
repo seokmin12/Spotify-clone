@@ -1,0 +1,52 @@
+{
+    "Latest": [
+        {
+            "title": "Deep Focus",
+            "Description": "Keep calm and focus with ambient and post-rock music.",
+            "ImageUrl": "https://i.pinimg.com/originals/e8/00/75/e800751407b6e82c65be8d6e29105eb9.jpg"
+        }, {
+            "title": "Peaceful Piano",
+            "Description": "Relax and indulge with beautiful piano pieces",
+            "ImageUrl": "https://i.pinimg.com/originals/1b/82/96/1b8296c37422e8d37798742dccf29718.jpg"
+        }, {
+            "title": "Jazz in the Background",
+            "Description": "Soft Jazz for all your activities.",
+            "ImageUrl": "https://img.hankyung.com/photo/202101/01.25017855.1-1200x.jpg"
+        }, {
+            "title": "lofi beats",
+            "Description": "Let yourself be sunkissed with beats to chill, relax, study, code, and focus.",
+            "ImageUrl": "https://img.hankyung.com/photo/202101/20210117081952_6003749808d54_1.jpg"
+        }, {
+            "title": "Jazz Vibes",
+            "Description": "The original chill instrumental beats playlist.",
+            "ImageUrl": "https://marketplace.canva.com/EAExV2m91mg/1/0/1600w/canva-%ED%8C%8C%EB%9E%80%EC%83%89-%EB%B0%A4%ED%95%98%EB%8A%98-%EA%B7%B8%EB%A6%BC%EC%9D%98-%EC%95%A8%EB%B2%94%EC%BB%A4%EB%B2%84-5tlu9r69vlc.jpg"
+        }
+    ],
+    "My Favorite": [
+        {
+            "title": "Dalkom Cafe",
+            "Description": "Chill Korean tunes that's perfect with your latte or americano.",
+            "ImageUrl": "https://pbs.twimg.com/media/FUgO7LxagAMmjey?format=jpg&name=large"
+        },
+        {
+            "title": "Work From Home",
+            "Description": "Clock in from the comfort of your own home with 8 hours of music to carry you through the day.",
+            "ImageUrl": "http://img.marieclairekorea.com/2016/08/mck_57b3fc8187056.jpg"
+        },
+        {
+            "title": "Hot Hits Korea",
+            "Description": "국내외 가장 핫한 노래들을 만나보세요!",
+            "ImageUrl": "https://spnimage.edaily.co.kr/images/Photo/files/NP/S/2017/03/PS17032000112.jpg"
+        },
+        {
+            "title": "행복을 드려요",
+            "Description": "듣고만 있어도 행복한 노래들과 더더욱 행복하세요 ;)",
+            "ImageUrl": "https://allforyoung-maycan-seoul.s3.ap-northeast-2.amazonaws.com/uploads/description/2021/01/28/3a5f6864-6e64-4b70-9d11-874acbf1b139.jpg"
+        },
+        {
+            "title": "Feelin' Myself",
+            "Description": "The hip-hop playlist that's a whole mood. Art By Laci Jordan; Cover: Princess Nokia",
+            "ImageUrl": "https://img.hankyung.com/photo/202101/01.25017855.1-1200x.jpg"
+        }
+    ]
+}

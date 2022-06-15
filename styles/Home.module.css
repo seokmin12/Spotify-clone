@@ -1,0 +1,211 @@
+.wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  width: 87%;
+  height: 100%;
+  background-color: #121212;
+  overflow-y: scroll;
+}
+
+.sidebar {
+  background-color: #030303;
+  width: 13%;
+  height: 100%;
+
+}
+
+.Logo {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.active {
+  color: #fff;
+  padding: 15px 30px;
+  border-left: 5px solid #66D36E;
+}
+
+.disabled {
+  padding: 15px 35px;
+  color: #818181;
+}
+
+.MenuList {
+  font-size: 17px;
+}
+
+.PlayLists {
+  margin-top: 100px;
+  color: #818181;
+  padding: 20px;
+}
+
+.CreatePlaylist {
+  padding: 10px;
+}
+
+.playlist {
+  padding: 15px 10px;
+}
+
+.BottomPlayer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #282828;
+  height: 110px;
+  z-index: 2;
+}
+
+.playerBtn {
+  text-align: center;
+  color: #A9A9A9;
+  font-size: 30px;
+  margin: 20px auto 0px auto;
+}
+
+.player {
+  color: #A9A9A9;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  margin: auto;
+}
+
+.ProgressBar {
+  height: 10px;
+  width: 70%;
+  background-color: #535353;
+  border-radius: 10px;
+  margin: 0px 10px;
+}
+
+.Line {
+  width: 95%;
+  margin: auto;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.LineTitle {
+  color: #fff;
+}
+
+.LineList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20px;
+  overflow-x: scroll;
+}
+
+.LinePlayList {
+  background-color: #181818;
+  padding: 20px;
+  border-radius: 10px;
+  width: 19%;
+  transition: all 200ms ease-in;
+  cursor: pointer;
+}
+
+.LinePlayList:hover {
+  background-color: #252525;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 3;
+    transform: none;
+  }
+}
+
+.LinePlayList:hover .PlayIcon {
+  display: inline-flex;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.CoverImg {
+  text-align: center;
+  position: relative;
+}
+
+.PlayListDescSection {
+  margin-top: 10px;
+}
+
+.PlayListDesc {
+  color: #818181;
+}
+
+.PlayIcon {
+  display: inline-flex;
+  float: right;
+  margin-top: -65px;
+  margin-right: 8px;
+  z-index: 1;
+  position: relative;
+  background-color: #66D36E;
+  border-radius: 50%;
+  box-shadow: 8px 13px 34px 0px rgba(0,0,0,0.75);
+  display: none;
+}
+
+.PlayIcon:hover {
+  transform: scale(1.1);
+}
+
+.PlayBtn {
+  display: flex;
+  flex-direction: column;
+}
+
+.NowPlay {
+  position: absolute;
+  width: 20%;
+  display: flex;
+  margin-left: 50px;
+  top: 15%;
+  bottom: 15%;
+}
+
+.NowPlayTitle {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  align-self: center;
+}
+
+.MusicTitle {
+  color: #fff;
+}
+
+.MusicArtist {
+  color: #BEBEBE;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.MusicIcons {
+  color: #BEBEBE;
+  align-self: center;
+  margin-left: 20px;
+}
