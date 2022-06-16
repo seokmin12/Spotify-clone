@@ -1,0 +1,32 @@
+.body {
+    background-color: #121212;
+    height: 100%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    width: 30%;
+    margin: auto;
+}
+
+.NotFound {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.GoHome {
+    display: flex;
+    justify-content: center;
+}
+
+.HomeBtn {
+    color: #818181;
+    font-size: 18px;
+    transition: all 200ms ease-in;
+}
+
+.HomeBtn:hover {
+    color: #fff;
+}
