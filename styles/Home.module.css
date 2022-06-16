@@ -109,9 +109,12 @@
 .LineList {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   margin-top: 20px;
   overflow-x: scroll;
+}
+
+.LineList::-webkit-scrollbar{
+  display:none;
 }
 
 .LinePlayList {
@@ -121,6 +124,7 @@
   width: 19%;
   transition: all 200ms ease-in;
   cursor: pointer;
+  margin: 0px 10px;
 }
 
 .LinePlayList:hover {
