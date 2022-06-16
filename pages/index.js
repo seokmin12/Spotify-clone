@@ -17,7 +17,7 @@ export default function Home() {
                   <div className={styles.CoverImg}>
                     <img src={data['ImageUrl']} width={240} height={240} alt="cover_img"></img>
                     <div className={styles.PlayIcon}>
-                      <i class="bi bi-play-fill" style={{color: '#000', fontSize: '30px', padding: '7px 7px 7px 12.5px'}}></i>
+                      <i className="bi bi-play-fill" style={{color: '#000', fontSize: '30px', padding: '7px 7px 7px 12.5px'}}></i>
                     </div>
                   </div>
                   <div className={styles.PlayListDescSection}>
@@ -46,14 +46,14 @@ export default function Home() {
             <Image src={logo} alt="logo" />
           </div>
           <ul>
-            <li className={`${styles.active} ${styles.MenuList}`}><i class="bi bi-house-door-fill" style={{paddingRight: '10px'}}></i>Home</li>
-            <li className={`${styles.disabled} ${styles.MenuList}`}><i class="bi bi-search" style={{paddingRight: '10px'}}></i>Search</li>
-            <li className={`${styles.disabled} ${styles.MenuList}`}><i class="bi bi-bookshelf" style={{paddingRight: '10px'}}></i>Library</li>
+            <li className={`${styles.active} ${styles.MenuList}`}><i className="bi bi-house-door-fill" style={{paddingRight: '10px'}}></i>Home</li>
+            <li className={`${styles.disabled} ${styles.MenuList}`}><i className="bi bi-search" style={{paddingRight: '10px'}}></i>Search</li>
+            <li className={`${styles.disabled} ${styles.MenuList}`}><i className="bi bi-bookshelf" style={{paddingRight: '10px'}}></i>Library</li>
           </ul>
           <div className={styles.PlayLists}>
             <h4>PLAYLISTS</h4>
             <ul>
-              <li className={styles.CreatePlaylist}><i class="bi bi-plus-square" style={{paddingRight: '10px'}}></i>Create a playlist</li>
+              <li className={styles.CreatePlaylist}><i className="bi bi-plus-square" style={{paddingRight: '10px'}}></i>Create a playlist</li>
               <li className={styles.playlist}>2022.06.15</li>
               <li className={styles.playlist}>2022.06.14</li>
               <li className={styles.playlist}>2022.06.13</li>
@@ -75,15 +75,15 @@ export default function Home() {
             <span className={styles.MusicArtist}>Charlie Puth</span>
           </div>
           <div className={styles.MusicIcons}>
-            <i class="bi bi-heart"></i>
-            <i class="bi bi-pip" style={{marginLeft: '10px'}}></i>
+            <i className="bi bi-heart"></i>
+            <i className="bi bi-pip" style={{marginLeft: '10px'}}></i>
           </div>
         </div>
         <div className={styles.PlayBtn}>
           <div className={styles.playerBtn}>
-            <i class="bi bi-skip-start-fill"></i>
-            <i class="bi bi-play-circle" style={{padding: '0px 15px'}}></i>
-            <i class="bi bi-skip-end-fill"></i>
+            <i className="bi bi-skip-start-fill"></i>
+            <i className="bi bi-play-circle" style={{padding: '0px 15px'}}></i>
+            <i className="bi bi-skip-end-fill"></i>
           </div>
           <div className={styles.player}>
             <p>00:00</p>
