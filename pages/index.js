@@ -38,8 +38,6 @@ export default function Home() {
         <Head>
           <title>Spotify</title>
           <meta name="description" content="spotify clone" />
-
-          <link rel="icon" href="../public/favicon.ico"></link>
         </Head>
         <div className={styles.sidebar}>
           <div className={styles.Logo}>
