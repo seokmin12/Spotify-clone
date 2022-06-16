@@ -13,7 +13,7 @@ export default function PageNotFound() {
                     <h1>404 Page Not Found</h1>
                 </div>
                 <div className={styles.GoHome}>
-                    <Link href="/" className={styles.HomeBtn}>Go Home</Link>
+                    <Link href="/"><a className={styles.HomeBtn}>Go Home</a></Link>
                 </div>
             </div>
         </div>
