@@ -15,7 +15,7 @@ export default function Home() {
               {jsonData[Object.keys(jsonData)[i]].map((data, index) => (
                 <div className={styles.LinePlayList} key={index}>
                   <div className={styles.CoverImg}>
-                    <img src={data['ImageUrl']} width="240" height="240"></img>
+                    <img src={data['ImageUrl']} width={240} height={240} alt="cover_img"></img>
                     <div className={styles.PlayIcon}>
                       <i class="bi bi-play-fill" style={{color: '#000', fontSize: '30px', padding: '7px 7px 7px 12.5px'}}></i>
                     </div>
@@ -69,7 +69,7 @@ export default function Home() {
       </div>
       <div className={styles.BottomPlayer}>
         <div className={styles.NowPlay}>
-          <img src='https://image.bugsm.co.kr/album/images/500/176713/17671399.jpg' style={{width: '72px', height: '72px'}}></img>
+          <img src='https://image.bugsm.co.kr/album/images/500/176713/17671399.jpg' width={72} height={72} alt="cover_img"></img>
           <div className={styles.NowPlayTitle}>
             <span className={styles.MusicTitle}>That's Hilarious</span>
             <span className={styles.MusicArtist}>Charlie Puth</span>
