@@ -1,6 +1,7 @@
 import styles from '../styles/PageNotFound.module.css'
 import Image from 'next/image'
 import logo from '../public/image/spotify_logo.svg'
+import Link from 'next/link'
 
 export default function PageNotFound() {
     return (
@@ -12,7 +13,7 @@ export default function PageNotFound() {
                     <h1>404 Page Not Found</h1>
                 </div>
                 <div className={styles.GoHome}>
-                    <a href="/" className={styles.HomeBtn}>Go Home</a>
+                    <Link href="/" className={styles.HomeBtn}>Go Home</Link>
                 </div>
             </div>
         </div>
