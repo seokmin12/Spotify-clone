@@ -71,7 +71,7 @@ export default function Home() {
         <div className={styles.NowPlay}>
           <img src='https://image.bugsm.co.kr/album/images/500/176713/17671399.jpg' width={72} height={72} alt="cover_img"></img>
           <div className={styles.NowPlayTitle}>
-            <span className={styles.MusicTitle}>That's Hilarious</span>
+            <span className={styles.MusicTitle}>That&apos;s Hilarious</span>
             <span className={styles.MusicArtist}>Charlie Puth</span>
           </div>
           <div className={styles.MusicIcons}>
