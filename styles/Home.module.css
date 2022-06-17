@@ -119,6 +119,30 @@
   display:none;
 }
 
+@keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  
+  100% {
+    background-position: 468px 0; 
+  }
+}
+
+.shimmer {
+  background: linear-gradient(to right, #252525 0%, #252525 20%, #252525 40%, #252525 100%);
+  background-repeat: no-repeat;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards; 
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+}
+
+.hidden {
+  opacity: 0;
+}
+
 .LinePlayList {
   background-color: #181818;
   padding: 20px;

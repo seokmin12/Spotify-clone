@@ -15,6 +15,10 @@ export default function Home() {
     SetMenuClick(isActive)
   }
 
+  setInterval(() => {
+    SetLoading(false)
+  }, 3000)
+
   const rendering = () => {
     const result = [];
     for (let i = 0; i < Object.keys(PlayListData).length; i++) {
@@ -23,14 +27,14 @@ export default function Home() {
             <h1 className={styles.LineTitle}>{Object.keys(PlayListData)[i]}</h1>
             <div className={styles.LineList}>
               {PlayListData[Object.keys(PlayListData)[i]].map((data, index) => (
-                <div className={styles.LinePlayList} key={index}>
-                  <div className={styles.CoverImg}>
+                <div className={`${isLoading ? styles.shimmer : ""} ${styles.LinePlayList}`} key={index}>
+                  <div className={`${isLoading ? styles.hidden: ""} ${styles.CoverImg}`}>
                     <img src={data['ImageUrl']} width={'100%'} height={'100%'} alt="cover_img"></img>
                     <div className={styles.PlayIcon}>
                       <i className="bi bi-play-fill" style={{color: '#000', fontSize: '30px', padding: '7px 7px 7px 12.5px'}}></i>
                     </div>
                   </div>
-                  <div className={styles.PlayListDescSection}>
+                  <div className={`${isLoading? styles.hidden: ""} ${styles.PlayListDescSection}`}>
                     <h4>{data['title']}</h4>
                     <p className={styles.PlayListDesc}>{data['Description']}</p>
                   </div>
