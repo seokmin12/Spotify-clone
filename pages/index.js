@@ -81,7 +81,7 @@ export default function Home() {
         <Head>
           <title>Spotify</title>
           <meta name="description" content="spotify clone" />
-          <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
+          <meta httpequiv="Content-Security-Policy" content="upgrade-insecure-requests"></meta>
         </Head>
         <div className={styles.sidebar}>
           <div className={styles.Logo}>
