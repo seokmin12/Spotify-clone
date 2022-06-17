@@ -8,7 +8,7 @@ import RealTimeTop5 from '../public/json/RealTimeTop5.json'
 import { useState } from 'react'
 
 export default function Home() {
-  const [BtnActive, SetMenuClick] = useState("Search");
+  const [BtnActive, SetMenuClick] = useState("Home");
   const [isLoading, SetLoading] = useState(true)
 
   const MenuClick = (isActive) => {
