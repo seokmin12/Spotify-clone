@@ -1,0 +1,65 @@
+.SearchSection {
+    display: flex;
+    width: 80%;
+    margin: 50px auto auto auto;
+}
+
+.SearchInput {
+    background-color: #252525;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 17px;
+    padding: 20px;
+    width: 100%;
+}
+
+.SearchInput:focus {
+    outline: none;
+}
+
+.List {
+    width: 80%;
+    margin: auto;
+    overflow-y: scroll;
+}
+
+.SearchList {
+    background-color: #181818;
+    display: flex;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    justify-content: space-between;
+}
+
+.SearchList:hover {
+    background-color: #252525;
+}
+
+.SongMain {
+    display: flex;
+}
+
+.cover_img {
+    margin-right: 30px;
+}
+
+.SongInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.SongTitle {
+    color: #fff;
+}
+
+.SongArtist {
+    color: #BEBEBE;
+}
+
+.SongIcon {
+    color: #BEBEBE;
+    align-self: center;
+}

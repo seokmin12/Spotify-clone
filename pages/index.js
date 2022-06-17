@@ -2,20 +2,30 @@ import Head from 'next/head'
 import Image from 'next/image'
 import logo from '../public/image/spotify_logo.svg'
 import styles from '../styles/Home.module.css'
-import jsonData from '../public/playlist.json'
+import SearchStyles from '../styles/SearchStyle.module.css'
+import PlayListData from '../public/json/playlist.json'
+import RealTimeTop5 from '../public/json/RealTimeTop5.json'
+import { useState } from 'react'
 
 export default function Home() {
+  const [BtnActive, SetMenuClick] = useState("Search");
+  const [isLoading, SetLoading] = useState(true)
+
+  const MenuClick = (isActive) => {
+    SetMenuClick(isActive)
+  }
+
   const rendering = () => {
     const result = [];
-    for (let i = 0; i < Object.keys(jsonData).length; i++) {
+    for (let i = 0; i < Object.keys(PlayListData).length; i++) {
         result.push(
           <div className={styles.Line} key={i}>
-            <h1 className={styles.LineTitle}>{Object.keys(jsonData)[i]}</h1>
+            <h1 className={styles.LineTitle}>{Object.keys(PlayListData)[i]}</h1>
             <div className={styles.LineList}>
-              {jsonData[Object.keys(jsonData)[i]].map((data, index) => (
+              {PlayListData[Object.keys(PlayListData)[i]].map((data, index) => (
                 <div className={styles.LinePlayList} key={index}>
                   <div className={styles.CoverImg}>
-                    <img src={data['ImageUrl']} width={240} height={240} alt="cover_img"></img>
+                    <img src={data['ImageUrl']} width={'100%'} height={'100%'} alt="cover_img"></img>
                     <div className={styles.PlayIcon}>
                       <i className="bi bi-play-fill" style={{color: '#000', fontSize: '30px', padding: '7px 7px 7px 12.5px'}}></i>
                     </div>
@@ -32,6 +42,35 @@ export default function Home() {
     }
     return result;
   };
+
+  const SearchList_rendering = () => {
+    const result = [];
+    RealTimeTop5.map((data, index) => (
+      result.push(
+        <div className={SearchStyles.SearchList} key={index}>
+          <div className={SearchStyles.SongMain}>
+            <div className={SearchStyles.cover_img}>
+              <img src={data['AlbumCover']} width={60} height={60}></img>
+            </div>
+            <div className={SearchStyles.SongInfo}>
+              <span className={SearchStyles.SongTitle}>
+                {data['Title']}
+              </span>
+              <span className={SearchStyles.SongArtist}>
+                {data['Artist']}
+              </span>
+            </div>
+          </div>
+          <div className={SearchStyles.SongIcon}>
+            <i className="bi bi-heart"></i>
+            <i className="bi bi-pip" style={{marginLeft: '10px'}}></i>
+          </div>
+        </div>
+      )
+    ))
+    return result;
+  };
+
   return (
     <div className={styles.wrap}>
       <div className={styles.main}>
@@ -44,9 +83,9 @@ export default function Home() {
             <Image src={logo} alt="logo" />
           </div>
           <ul>
-            <li className={`${styles.active} ${styles.MenuList}`}><i className="bi bi-house-door-fill" style={{paddingRight: '10px'}}></i>Home</li>
-            <li className={`${styles.disabled} ${styles.MenuList}`}><i className="bi bi-search" style={{paddingRight: '10px'}}></i>Search</li>
-            <li className={`${styles.disabled} ${styles.MenuList}`}><i className="bi bi-bookshelf" style={{paddingRight: '10px'}}></i>Library</li>
+            <li className={`${BtnActive == "Home" ? styles.active : styles.disabled} ${styles.MenuList}`} onClick={() => MenuClick("Home")}><i className="bi bi-house-door-fill" style={{paddingRight: '10px'}}></i>Home</li>
+            <li className={`${BtnActive == "Search" ? styles.active : styles.disabled} ${styles.MenuList}`} onClick={() => MenuClick("Search")}><i className="bi bi-search" style={{paddingRight: '10px'}}></i>Search</li>
+            <li className={`${BtnActive == "Library" ? styles.active : styles.disabled} ${styles.MenuList}`} onClick={() => MenuClick("Library")}><i className="bi bi-bookshelf" style={{paddingRight: '10px'}}></i>Library</li>
           </ul>
           <div className={styles.PlayLists}>
             <h4>PLAYLISTS</h4>
@@ -60,9 +99,30 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.container}>
-          <ul style={{marginBottom: '200px'}}>
-            {rendering()}
-          </ul>
+          {
+            BtnActive === "Home" ? 
+              <ul style={{marginBottom: '200px'}}>
+                {rendering()}
+              </ul>
+             : ( BtnActive === "Search" ?
+              <div>
+                <div className={SearchStyles.SearchSection}>
+                  <input type='text' className={SearchStyles.SearchInput} placeholder="Search Title, Artist"></input>
+                </div>
+                <ul style={{margin: "50px auto 150px auto"}}>
+                  <div className={SearchStyles.List}>
+                    {SearchList_rendering()}
+                  </div>
+                </ul>
+              </div>
+              : ( BtnActive === "Library" ?
+              <div style={{color: "#fff", textAlign: "center"}}>
+                <h1>Library</h1>
+              </div>
+              : ""
+              )
+            )
+          }
         </div>
       </div>
       <div className={styles.BottomPlayer}>
