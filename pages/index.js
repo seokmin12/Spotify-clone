@@ -9,7 +9,8 @@ import { useState } from 'react'
 
 export default function Home() {
   const [BtnActive, SetMenuClick] = useState("Home");
-  const [isLoading, SetLoading] = useState(true)
+  const [isLoading, SetLoading] = useState(true);
+  const [IsPlaying, SetPlaying] = useState(false);
 
   const MenuClick = (isActive) => {
     SetMenuClick(isActive)
@@ -18,6 +19,17 @@ export default function Home() {
   setInterval(() => {
     SetLoading(false)
   }, 3000)
+
+  const play = () => {
+    var audio = document.getElementById('audio');
+    if (IsPlaying) {
+      audio.pause();
+      SetPlaying(false);
+    } else {
+      audio.play();
+      SetPlaying(true);
+    }
+  }
 
   const rendering = () => {
     const result = [];
@@ -138,14 +150,15 @@ export default function Home() {
             <span className={styles.MusicArtist}>Charlie Puth</span>
           </div>
           <div className={styles.MusicIcons}>
-            <i className="bi bi-heart"></i>
+            <i className="bi bi-heart"></i> 
             <i className="bi bi-pip" style={{marginLeft: '10px'}}></i>
           </div>
         </div>
         <div className={styles.PlayBtn}>
+          <audio id='audio' src='https://audioplayer.madza.dev/Madza-Chords_of_Life.mp3'></audio>
           <div className={styles.playerBtn}>
             <i className="bi bi-skip-start-fill"></i>
-            <i className="bi bi-play-circle" style={{padding: '0px 15px'}}></i>
+            <i className="bi bi-play-circle" style={{padding: '0px 15px', cursor: 'pointer'}} onClick={play}></i>
             <i className="bi bi-skip-end-fill"></i>
           </div>
           <div className={styles.player}>
